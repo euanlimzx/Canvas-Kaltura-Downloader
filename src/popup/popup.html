@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    body { width: 200px; padding: 10px; }
-    button { width: 100%; padding: 10px; }
-  </style>
-</head>
-<body>
-  <button id="btnShowOrangeDiv">Click this button to add an orange div to the page</button>
-  <p>(I am in "popup.html")</p>  
-  <script src="popup.js"></script>
-</body>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+        border-radius: 5rem;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+      }
+      #spinner {
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #3498db; /* Blue */
+        border-radius: 50%;
+        margin-left:calc(50% - 20px);
+        width: 40px; /* Size of the spinner */
+        height: 40px; /* Size of the spinner */
+        animation: spin 1s linear infinite; /* Animation */
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>How to use:</p>
+    <p>1. Click on the lecture and let it start playing</p>
+    <p>2. Click on the fetch button and wait for the link to load!</p>
+    <p>3. Click on the download link</p>
+    <p>4. In the new tab, right click and save the video!</p>
+    <button id="fetch">Fetch Download</button>
+    <script src="popup.js"></script>
+  </body>
 </html>

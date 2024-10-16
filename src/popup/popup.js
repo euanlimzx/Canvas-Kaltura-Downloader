@@ -1,20 +1,29 @@
-// this code will bind the modifyDOM function to the btnShowOrangeDiv click event
-document.getElementById('btnShowOrangeDiv').addEventListener('click', function() {
+document.getElementById('fetch').addEventListener('click', async function() {
+  document.getElementById('fetch').remove()
+  const spinner = createLoadingSpinner()
+  document.body.appendChild(spinner)
+  const response = await chrome.runtime.sendMessage({name: 'fetchVideo'});
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
-      function: modifyDOM
+      function: createDownloadButton(response.url)
     });
   });
 });
 
-// this code will be executed when the button btnShowOrangeDiv is clicked
-function modifyDOM() {
-  const version = chrome.runtime.getManifest().version;
-  const div = document.createElement('div');
-  div.textContent = `DOM modified by Fresh Chrome Extension boilerplate ${version} (I am in "popup.js")`;
-  div.style.cssText =
-    'background-color: orange; color: black; font-weight: bold; padding: 10px; width: 100%; box-sizing: border-box;';
-  document.body.insertAdjacentElement('afterbegin', div);
-  console.log('Action executed from popup!');
+function createDownloadButton(url) {
+  const button = document.createElement('button');
+  button.innerText = 'Download Video';
+  button.addEventListener('click', () => {
+    window.open(url, '_blank');
+  });
+  document.getElementById('spinner').remove()
+  document.body.appendChild(button);
+}
+
+function createLoadingSpinner() {
+  // Create a div element for the spinner
+  const spinner = document.createElement("div");
+  spinner.id = "spinner"; // Add the spinner class for styling
+  return spinner;
 }
