@@ -40,7 +40,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   return true; // Indicate that the response will be sent asynchronously
 });
 
-//Example
-//https://cfvod.kaltura.com/pd/p/1467031/sp/146703100/serveFlavor/entryId/1_zrrq51k5/v/1/ev/4/flavorId/1_mb8xo7gf/name/a.mp4
 
 

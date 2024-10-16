@@ -1,43 +1,191 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      .inter {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: "auto";
+        font-weight: 500;
+        font-style: normal;
+      }
+      .inter-semibold {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: "auto";
+        font-weight: 600;
+        font-style: normal;
+      }
       body {
-        width: 200px;
+        width: 400px;
         padding: 10px;
         border-radius: 5rem;
+        font-size: medium;
+        background: white;
+        padding: 2rem;
       }
-      button {
-        width: 100%;
-        padding: 10px;
-      }
-      #spinner {
-        border: 8px solid #f3f3f3; /* Light grey */
-        border-top: 8px solid #3498db; /* Blue */
-        border-radius: 50%;
-        margin-left:calc(50% - 20px);
-        width: 40px; /* Size of the spinner */
-        height: 40px; /* Size of the spinner */
-        animation: spin 1s linear infinite; /* Animation */
+      .button {
+        line-height: 1;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.35em;
+        padding: 0.75em 1em;
+        padding-right: 1.25em;
+        color: #fff;
+        border: 1px solid transparent;
+        font-weight: 700;
+        border-radius: 2em;
+        font-size: 1rem;
+        box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+        transition: transform 0.3s;
+
+        background: linear-gradient(
+          90deg,
+          rgba(77, 54, 208, 1) 0%,
+          rgba(132, 116, 254, 1) 100%
+        );
       }
 
-      @keyframes spin {
+      .button__icon {
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      .button:hover {
+        border-color: #f4f5f2;
+      }
+
+      .button:active {
+        transform: scale(0.98);
+        box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+      }
+
+      /* From Uiverse.io by G4b413l */
+      .three-body {
+        --uib-size: 35px;
+        --uib-speed: 0.8s;
+        --uib-color: #5d3fd3;
+        position: relative;
+        display: inline-block;
+        height: var(--uib-size);
+        width: var(--uib-size);
+        animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+      }
+
+      .three-body__dot {
+        position: absolute;
+        height: 100%;
+        width: 30%;
+      }
+
+      .three-body__dot:after {
+        content: "";
+        position: absolute;
+        height: 0%;
+        width: 100%;
+        padding-bottom: 100%;
+        background-color: var(--uib-color);
+        border-radius: 50%;
+      }
+
+      .three-body__dot:nth-child(1) {
+        bottom: 5%;
+        left: 0;
+        transform: rotate(60deg);
+        transform-origin: 50% 85%;
+      }
+
+      .three-body__dot:nth-child(1)::after {
+        bottom: 0;
+        left: 0;
+        animation: wobble1 var(--uib-speed) infinite ease-in-out;
+        animation-delay: calc(var(--uib-speed) * -0.3);
+      }
+
+      .three-body__dot:nth-child(2) {
+        bottom: 5%;
+        right: 0;
+        transform: rotate(-60deg);
+        transform-origin: 50% 85%;
+      }
+
+      .three-body__dot:nth-child(2)::after {
+        bottom: 0;
+        left: 0;
+        animation: wobble1 var(--uib-speed) infinite
+          calc(var(--uib-speed) * -0.15) ease-in-out;
+      }
+
+      .three-body__dot:nth-child(3) {
+        bottom: -5%;
+        left: 0;
+        transform: translateX(116.666%);
+      }
+
+      .three-body__dot:nth-child(3)::after {
+        top: 0;
+        left: 0;
+        animation: wobble2 var(--uib-speed) infinite ease-in-out;
+      }
+
+      @keyframes spin78236 {
         0% {
           transform: rotate(0deg);
         }
+
         100% {
           transform: rotate(360deg);
         }
       }
+
+      @keyframes wobble1 {
+        0%,
+        100% {
+          transform: translateY(0%) scale(1);
+          opacity: 1;
+        }
+
+        50% {
+          transform: translateY(-66%) scale(0.65);
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes wobble2 {
+        0%,
+        100% {
+          transform: translateY(0%) scale(1);
+          opacity: 1;
+        }
+
+        50% {
+          transform: translateY(66%) scale(0.65);
+          opacity: 0.8;
+        }
+      }
     </style>
   </head>
-  <body>
-    <p>How to use:</p>
+  <body class="inter">
+    <p class="inter-semibold">How to use:</p>
     <p>1. Click on the lecture and let it start playing</p>
     <p>2. Click on the fetch button and wait for the link to load!</p>
     <p>3. Click on the download link</p>
     <p>4. In the new tab, right click and save the video!</p>
-    <button id="fetch">Fetch Download</button>
+    <div
+      style="display: flex; justify-content: right; padding-top: 1rem"
+      id="button-container"
+    >
+      <button class="button" id="fetch">
+        <span class="button__text">Fetch Video</span>
+      </button>
+    </div>
+
     <script src="popup.js"></script>
   </body>
 </html>

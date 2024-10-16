@@ -20,18 +20,6 @@
     "64": "assets/icons/icon64.png",
     "128": "assets/icons/icon128.png"
   },
-  "content_scripts": [
-    {
-      "run_at": "document_start",
-      "js": ["src/content/before.js"],
-      "matches": ["https://*/*", "http://*/*"]
-    },
-    {
-      "run_at": "document_idle",
-      "js": ["src/content/after.js"],
-      "matches": ["https://*/*", "http://*/*"]
-    }
-  ],
   "background": {
     "service_worker": "src/service-worker.js",
     "type": "module"
@@ -39,3 +27,4 @@
   "permissions": ["tabs", "scripting", "webRequest"],
   "host_permissions": ["https://*/*", "http://*/*"]
 }
+
