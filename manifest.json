@@ -1,7 +1,6 @@
 {
   "name": "Canvas-Kaltura lecture downloader",
   "description": "Chrome Extension to download Canvas / Kaltura videos.",
-  "homepage_url": "https://github.com/llagerlof/fresh-chrome-extension",
   "version": "3.1.0",
   "manifest_version": 3,
   "action": {
