@@ -12,6 +12,5 @@ How to use:
 3. Once the video link is fetched, click download video and it will bring you to a new tab
 4. In the new tab, right click the video and select "Save video as"
 
-<img width="477" alt="image" src="https://github.com/user-attachments/assets/8f42f6eb-d82b-41f1-a10d-6e599d03ea3e">
 
 
