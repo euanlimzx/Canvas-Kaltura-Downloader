@@ -1,8 +1,10 @@
 document.getElementById("fetch").addEventListener("click", async function () {
   document.getElementById("fetch").remove();
+
   const spinner = createLoadingSpinner();
   const buttonContainer = document.getElementById("button-container");
   buttonContainer.appendChild(spinner);
+  
   const response = await chrome.runtime.sendMessage({ name: "fetchVideo" });
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.scripting.executeScript({

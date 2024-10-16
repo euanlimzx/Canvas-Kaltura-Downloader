@@ -1,23 +1,23 @@
 {
-  "name": "Fresh Chrome Extension boilerplate",
-  "description": "Fully functional, useful bare minimum Google Chrome extension boilerplate [Manifest V3].",
+  "name": "Canvas-Kaltura lecture downloader",
+  "description": "Chrome Extension to download Canvas / Kaltura videos.",
   "homepage_url": "https://github.com/llagerlof/fresh-chrome-extension",
   "version": "3.1.0",
   "manifest_version": 3,
   "action": {
-    "default_title": "Fresh Chrome Extension boilerplate 3.1.0",
+    "default_title": "Canvas-Kaltura lecture downloader",
     "default_popup": "src/popup/popup.html",
     "default_icon": {
       "16": "assets/icons/icon16.png",
       "32": "assets/icons/icon32.png",
-      "64": "assets/icons/icon64.png",
+      "48": "assets/icons/icon48.png",
       "128": "assets/icons/icon128.png"
     }
   },
   "icons": {
     "16": "assets/icons/icon16.png",
     "32": "assets/icons/icon32.png",
-    "64": "assets/icons/icon64.png",
+    "48": "assets/icons/icon48.png",
     "128": "assets/icons/icon128.png"
   },
   "background": {
@@ -27,4 +27,3 @@
   "permissions": ["tabs", "scripting", "webRequest"],
   "host_permissions": ["https://*/*", "http://*/*"]
 }
-
