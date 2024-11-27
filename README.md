@@ -9,7 +9,7 @@ Installation Instructions (<5 minutes):
 3. Click on extensions, then manage extensions
 4. In the top right, toggle the button that says "Developer Mode"
 5. In the top left, click on "load unpacked"
-6. Click into the folder you just downloaded. You should see another folders called /assets, /src. This is the correct folder
+6. Click into the folder you just downloaded. You should see another folders called /assets/src. This is the correct folder
 7. Select the folder!
    
 Guide with photos here:
