@@ -16,6 +16,7 @@ Alternatively, guide with photos here:
 [guide here](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/)
 
 Video tutorial here:
+
 https://github.com/user-attachments/assets/7d04b5b8-6a32-401a-a730-999f14dedac6
 
 
