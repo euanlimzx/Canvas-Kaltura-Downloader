@@ -14,6 +14,7 @@ Installation Instructions (<5 minutes):
    
 Alternatively, guide with photos here:
 [guide here](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/)
+
 Video tutorial here:
 https://github.com/user-attachments/assets/7d04b5b8-6a32-401a-a730-999f14dedac6
 
@@ -24,6 +25,7 @@ How to use:
 3. Once the video link is fetched, click download video and it will bring you to a new tab
 4. In the new tab, right click the video and select "Save video as"
 Video tutorial here:
+
 https://github.com/user-attachments/assets/ba5cf372-9c08-4fe2-9edf-8fb07bc193b9
 
 
