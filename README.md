@@ -12,7 +12,7 @@ Installation Instructions (<5 minutes):
 6. Click into the folder you just downloaded. You should see another folders called /assets, /src. This is the correct folder
 7. Select the folder!
    
-Alternatively, guide with photos here:
+Guide with photos here:
 [guide here](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/)
 
 Video tutorial here:
