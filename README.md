@@ -1,6 +1,8 @@
 # How to download your UCLA Lectures
 This chrome extension allows you to download lectures from Canvas, specifically those hosted on Kaltura.
 
+Disclaimer: intended for personal, educational use only, and you are solely responsible for ensuring compliance with your university's policies and applicable laws regarding the downloading and use of lecture materials.
+
 You can download it <a href="https://github.com/euanlimzx/Canvas-Kaltura-Downloader/releases/tag/1.0.0" target="_blank">here</a>!!
 
 Installation Instructions (<5 minutes):
